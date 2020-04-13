@@ -12,6 +12,7 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { ReactiveFormsModule} from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { AppCustomPreloader } from './app-preload.module';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,11 @@ import { AppCustomPreloader } from './app-preload.module';
     AngularFontAwesomeModule,
     ReactiveFormsModule,
     FormsModule,
+    ToastrModule.forRoot({
+      timeOut: 5000,
+      positionClass: 'toast-bottom-right',
+      preventDuplicates: false,
+    }),
   ],
   providers: [AppCustomPreloader],
   bootstrap: [AppComponent]

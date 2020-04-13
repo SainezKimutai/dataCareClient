@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faStethoscope, faCheck } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-login',
@@ -8,8 +9,22 @@ import { Component, OnInit } from '@angular/core';
 export class LoginComponent implements OnInit {
 
   constructor() { }
-public ImprintLoader = true;
+
+  public faStethoscope = faStethoscope;
+  public faCheck = faCheck;
+
+
+
   ngOnInit() {
   }
+
+
+
+
+
+
+
+
+
 
 }

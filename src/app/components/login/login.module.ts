@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { LoginComponent } from './login.component';
 import { LoginRoutingModule } from './login-routing.module';
 import { CommonModule } from '@angular/common';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
 
@@ -12,7 +14,10 @@ import { CommonModule } from '@angular/common';
     ],
   imports: [
       CommonModule,
-      LoginRoutingModule
+      LoginRoutingModule,
+      FontAwesomeModule,
+      ReactiveFormsModule,
+      FormsModule,
     ],
   providers: [],
   bootstrap: []
