@@ -10,6 +10,8 @@ export class LoginComponent implements OnInit {
 
   constructor() { }
 
+  public ImprintLoader = false;
+
   public faStethoscope = faStethoscope;
   public faCheck = faCheck;
 
