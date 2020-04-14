@@ -22,4 +22,4 @@ import { MenuRoutingModule } from './menu-routing.module';
   providers: [],
   bootstrap: []
 })
-export class LoginModule { }
+export class MenuModule { }
