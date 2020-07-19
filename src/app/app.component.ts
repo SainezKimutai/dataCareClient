@@ -7,4 +7,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'dataCareClient';
+
+
+
+  public ImprintLoader = false;
+
+
+  startLoader() {
+    this.ImprintLoader = true;
+  }
+
+  stopLoader() {
+    this.ImprintLoader = false;
+  }
+
 }

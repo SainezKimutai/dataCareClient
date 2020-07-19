@@ -1,27 +1,27 @@
-// Global Color Themes
+
 @import "~bootstrap/dist/css/bootstrap.css"
 
-$bootstrap: ( primary: #0275d8, success: #5cb85c, info: #5bc0de, warning :#f0ad4e, danger: #d9534f, dark: #292b2c, light: #f7f7f7 )
 
-$grayColors: (g100: #f0f3f5, g200: #e4e7ea, g300: #c8ced3, g400: #acb4bc, g500: #8f9ba6, g600: #73818f, g700: #5c6873, g800: #2f353a, g900: #23282c)
+$brandColors: (primary: #000080, secondary: #F39C12, title: #17202A, text: #273746 )
 
-$brandColors: ( primary: #485d70, secondary: #f08e05)
+$btsColors: (primary: #3238F8, success: #2DB34D, info: #02b0cc, warning: #FF9F00, danger: #E72A29, secondary: #6c757d, light: #f0f3f5, dark: #2f353a,)
 
+$grayColors: (g100: #F0F0F0 , g200: #E0E0E0, g300: #C0C0C0, g400: #A0A0A0, g500: #808080, g600: #606060, g700: #404040, g800: #202020)
 
 // Color function
-
-@function bootstrap($color-name) 
-    @return map-get($bootstrap , $color-name)
-
-@function grayColor($color-name) 
-    @return map-get($grayColors , $color-name)
-
 @function brandColor($color-name) 
     @return map-get($brandColors , $color-name)
 
+@function btsColor($color-name) 
+    @return map-get($btsColors , $color-name)
+
+@function grayColor($color-name) 
+    @return map-get($grayColors , $color-name)
+    
+    
 // Resposivenes Breakpoints
 // Extra small    
-$desktop_xm: 0px
+$desktop_xm: 425px
 
 @mixin desktop_xm
     @media (max-width: #{$desktop_xm}) 
@@ -56,22 +56,35 @@ $desktop_xl: 1200px
         @content
 
 $bgThrough: rgba(0,0,0,0.2)  
+$size1: 72px
+$size2: 48px
+$size3: 32px
+$size4: 24px
+$size5: 18px 
+$size6: 14px
+$size7: 12px
+$size8: 11px
     
     
-#main_body
-    background-color: grayColor(g100)
-    font-family: Arial
-    font-size: 12px
+@font-face 
+    font-family: 'Artifact'
+    src: url("/assets/fonts/Artifact.otf") format('otf'), url("/assets/fonts/Artifact.otf") format('otf')
 
+
+#main_body
+    background-color: grayColor(g200)
+    font-family: Artifact
+    width: 100%
     -ms-overflow-style: none
     scrollbar-width: none
+    color: black
 
 ::-webkit-scrollbar
     width: 0px
     background: transparent
 
 ::-webkit-scrollbar-thumb 
-    background-color: bootstrap(primary)
+    background-color: brandColor(blue)
     width: 1px
 
 
@@ -79,11 +92,45 @@ $bgThrough: rgba(0,0,0,0.2)
 
 
 
+.title-1 
+        font-size: $size1
+        color: brandColor(title)
+.title-2
+        font-size: $size2
+        color: brandColor(title)
+.title-3
+        font-size: $size3
+        color: brandColor(title)
+.text-1
+        font-size: $size4
+        color: brandColor(text)
+.text-2
+        font-size: $size5
+        color: brandColor(text)
+.text-3
+        font-size: $size6
+        color: brandColor(text)
 
-p 
-    color: grayColor(g700)
-    font-size: 14px
-    font-weight: 400px
+.my-grid
+    display: flex
+    display: -ms-flex
+    flex-wrap: wrap
+    -ms-flex-wrap: wrap
+    flex-direction: row
+    justify-content: center
+.my-grid .my-grid-item
+    margin: .5em
+    width: 100%
+    max-width: 400px
+    min-width: 200px
+    height: fit-content
+
+
+
+
+
+
+
 
 
 
@@ -95,7 +142,7 @@ p
     left: 50%
     transform: translate(-50%, -50%)
 
-#toast-container > div 
+#toast-my-container > div 
     opacity: 1
 
 .toast 
@@ -108,13 +155,14 @@ p
     backdrop-filter: blur(0) !important
 
 .toast-success 
-    background-color: #51A351 !important
+    background-color: #2DB34D !important
+
 
 .toast-error 
     background-color: #BD362F !important
 
 .toast-info 
-    background-color: #2F96B4 !important
+    background-color: #02b0cc !important
 
 .toast-warning 
     background-color: #F89406 !important
@@ -124,10 +172,10 @@ p
 
 
 
-// Imprint loader
+// custom loader
 
-.imprint-loader
-    z-index: 3
+.custom-loader
+    z-index: 3000
     top: 0
     left: 0
     width: 100%
@@ -136,10 +184,7 @@ p
     display: inline
     align-items: stretch
     position: fixed
-
-
-
-.imprint-loader .imprint-loader-wrap
+.custom-loader .custom-loader-wrap
     position: absolute
     margin: auto
     top: 50%
@@ -148,7 +193,7 @@ p
     width: 120px
     height: 60px
 
-.imprint-loader .imprint-loader-wrap .imprint-loader-main
+.custom-loader .custom-loader-wrap .custom-loader-main
     width: 60px
     height: 60px
     text-align: centerng
@@ -157,7 +202,7 @@ p
     grid-gap: 0px
 
 
-.imprint-loader .imprint-loader-wrap .imprint-loader-main .imprint-loader-ball
+.custom-loader .custom-loader-wrap .custom-loader-main .custom-loader-ball
     width: 16px
     height: 16px
     border: 0px solid transparent
@@ -199,6 +244,10 @@ p
 
     50% 
         transform: translateY(-1em) translateX(0px)
+
+
+
+
 
 
 

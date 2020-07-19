@@ -6,9 +6,6 @@ import { AppCustomPreloader } from './app-preload.module';
 
 const routes: Routes = [
 
-  { path: '', redirectTo: 'login', pathMatch: 'full' },
-  { path: 'login', loadChildren: 'src/app/components/login/login.module#LoginModule' },
-  { path: 'menu', loadChildren: 'src/app/components/menu/menu.module#MenuModule' },
 
 ];
 
