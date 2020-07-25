@@ -9,6 +9,7 @@ const routes: Routes = [
   { path: 'home', loadChildren: 'src/app/components/home/home.module#HomeModule', data: {preload: true} },
   { path: 'login', loadChildren: 'src/app/components/login/login.module#LoginModule', data: {preload: true} },
   { path: 'docket', loadChildren: 'src/app/components/docket/docket.module#DocketModule', data: {preload: true} },
+  { path: 'out-patient', loadChildren: 'src/app/components/outPatient/out-p.module#OutPatientModule', data: {preload: true} },
   { path: '**', loadChildren: 'src/app/components/notFound/not-found.module#NotFoundModule', data: {preload: false}}
 ];
 

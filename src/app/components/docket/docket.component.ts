@@ -22,4 +22,18 @@ ngOnInit() {
 }
 
 
+
+logout() {
+  sessionStorage.clear();
+  this.router.navigate(['/home']);
+}
+
+
+
+navigateTo(link: any) {
+  this.router.navigate([link]);
+}
+
+
+
 }

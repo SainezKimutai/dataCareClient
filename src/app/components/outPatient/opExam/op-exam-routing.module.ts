@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { DocketComponent } from './docket.component';
+import { OpExamComponent } from './op-exam.component';
 
 
 // tslint:disable: max-line-length
 const routes: Routes = [
 
-    { path: '', component: DocketComponent }
+    { path: '', component: OpExamComponent }
 
 ];
 
@@ -14,6 +14,6 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class DocketRoutingModule { }
+export class OpExamRoutingModule { }
 
 

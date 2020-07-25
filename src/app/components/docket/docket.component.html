@@ -1,7 +1,7 @@
 <main class="main">
     <section class="header-section">
         <h4>Data&nbsp;Care</h4>
-        <button class="btn" routerLink="/home"> <fa-icon [icon]="faPowerOff"></fa-icon> Log Out</button>
+        <button class="btn" (click)="logout()"> <fa-icon [icon]="faPowerOff"></fa-icon> Log Out</button>
     </section>
     
 
@@ -14,7 +14,7 @@
             </div>
 
             <div class="list-wrap">
-                <h4 class="list-item">
+                <h4 class="list-item" (click)="navigateTo('/out-patient')">
                     Out Patient
                 </h4>
                 <h4 class="list-item">

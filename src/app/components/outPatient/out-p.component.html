@@ -1,0 +1,176 @@
+
+
+<nav #topbar id="topbar" class="navbar navbar-expand-md">
+
+
+    <a class="navbar-brand"> <div class="image-wrap">  <img src="../../../assets/illustrations/lost.jpg" alt="logo"></div> </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTop" aria-controls="navbarTop" aria-expanded="false" aria-label="Toggle navigation">
+        <fa-icon [icon]="faBars"></fa-icon>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTop">
+      <ul class="navbar-nav nav-pills">
+
+
+        <li class="nav-item" >
+          <a (click)="toHome()" class="nav-link" data-toggle="collapse" data-target="#navbarTop" aria-controls="navbarTop" aria-expanded="false" aria-label="Toggle navigation">
+            <fa-icon [icon]="faHome"></fa-icon> <span>Home</span>
+          </a>
+        </li>
+  
+
+   
+          <li [ngClass]="ReceptionStatus ? 'nav-item active' : 'nav-item'" >
+            <a  [ngClass]="ReceptionStatus ? 'nav-link active' : 'nav-link'" data-toggle="collapse" data-target="#navbarTop" aria-controls="navbarTop" aria-expanded="false" aria-label="Toggle navigation">
+              <fa-icon [icon]="faCube"></fa-icon> <span>Reception</span>
+            </a>
+        </li>
+    
+    
+        <li [ngClass]="ExaminationStatus ? 'nav-item active' : 'nav-item'" >
+          <a  [ngClass]="ExaminationStatus ? 'nav-link active' : 'nav-link'" data-toggle="collapse" data-target="#navbarTop" aria-controls="navbarTop" aria-expanded="false" aria-label="Toggle navigation">
+            <fa-icon [icon]="faCube"></fa-icon> <span>Examination</span>
+          </a>
+        </li>
+    
+    
+        <li [ngClass]="LaboratoryStatus ? 'nav-item active' : 'nav-item'" >
+          <a  [ngClass]="LaboratoryStatus ? 'nav-link active' : 'nav-link'" data-toggle="collapse" data-target="#navbarTop" aria-controls="navbarTop" aria-expanded="false" aria-label="Toggle navigation">
+            <fa-icon [icon]="faCube"></fa-icon> <span>Laboratory</span>
+          </a>
+      </li>
+    
+    
+      <li [ngClass]="XrayStatus ? 'nav-item active' : 'nav-item'" >
+        <a  [ngClass]="XrayStatus ? 'nav-link active' : 'nav-link'" data-toggle="collapse" data-target="#navbarTop" aria-controls="navbarTop" aria-expanded="false" aria-label="Toggle navigation">
+          <fa-icon [icon]="faCube"></fa-icon> <span>X-Ray</span>
+        </a>
+      </li>
+    
+      <li [ngClass]="PharmacyStatus ? 'nav-item active' : 'nav-item'" >
+        <a  [ngClass]="PharmacyStatus ? 'nav-link active' : 'nav-link'" data-toggle="collapse" data-target="#navbarTop" aria-controls="navbarTop" aria-expanded="false" aria-label="Toggle navigation">
+          <fa-icon [icon]="faCube"></fa-icon> <span>Pharmacy</span>
+        </a>
+      </li>
+  
+  
+  
+        <li class="nav-item">
+          <a (click)="logout()" class="nav-link" data-toggle="collapse" data-target="#navbarTop" aria-controls="navbarTop" aria-expanded="false" aria-label="Toggle navigation">
+            <fa-icon [icon]="faPowerOff"></fa-icon> <span>Log Out</span>
+          </a>
+        </li>
+      
+      
+      </ul>
+  
+    </div>
+
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Sidebar -->
+<nav id="sidebar" [ngClass]="sideBarStatus ? '' : 'hide'">
+
+
+  <div class="header-nav-item" >
+    <img src="../../../assets/illustrations/lost.jpg">
+  </div>
+
+
+  <ul class="navbar-nav nav-pills">
+
+    <li class="nav-item" >
+      <a (click)="toHome()" class="nav-link">
+        <fa-icon [icon]="faHome"></fa-icon> <span>Home</span>
+      </a>
+    </li>
+
+
+    <li [ngClass]="ReceptionStatus ? 'nav-item active' : 'nav-item'" >
+        <a  [ngClass]="ReceptionStatus ? 'nav-link active' : 'nav-link'">
+          <fa-icon [icon]="faCube"></fa-icon> <span>Reception</span>
+        </a>
+    </li>
+
+
+    <li [ngClass]="ExaminationStatus ? 'nav-item active' : 'nav-item'" >
+      <a  [ngClass]="ExaminationStatus ? 'nav-link active' : 'nav-link'">
+        <fa-icon [icon]="faCube"></fa-icon> <span>Examination</span>
+      </a>
+    </li>
+
+
+    <li [ngClass]="LaboratoryStatus ? 'nav-item active' : 'nav-item'" >
+      <a  [ngClass]="LaboratoryStatus ? 'nav-link active' : 'nav-link'">
+        <fa-icon [icon]="faCube"></fa-icon> <span>Laboratory</span>
+      </a>
+  </li>
+
+
+  <li [ngClass]="XrayStatus ? 'nav-item active' : 'nav-item'" >
+    <a  [ngClass]="XrayStatus ? 'nav-link active' : 'nav-link'">
+      <fa-icon [icon]="faCube"></fa-icon> <span>X-Ray</span>
+    </a>
+  </li>
+
+  <li [ngClass]="PharmacyStatus ? 'nav-item active' : 'nav-item'" >
+    <a  [ngClass]="PharmacyStatus ? 'nav-link active' : 'nav-link'">
+      <fa-icon [icon]="faCube"></fa-icon> <span>Pharmacy</span>
+    </a>
+  </li>
+
+
+    <li class="nav-item">
+      <a (click)="logout()" class="nav-link">
+        <fa-icon [icon]="faPowerOff"></fa-icon> <span>Log Out</span>
+      </a>
+    </li>
+  
+  
+  </ul>
+
+
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<main id="op_body_wrapper" [ngClass]="sideBarStatus ? '' : 'expand'">
+
+  <router-outlet></router-outlet>
+
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
