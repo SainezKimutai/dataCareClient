@@ -82,6 +82,7 @@
         -moz-transition: opacity 2s
         -ms-transition: opacity 2s
         -o-transition: opacity 2s
+        box-shadow: 7px 0 30px rgba(0, 0, 0, .2)
 .navbar-section .navbar
     background-color: white
     padding: .3em 1em
@@ -211,3 +212,140 @@
     -o-background-position: center      
     @include desktop_md
         display: none
+
+
+
+
+
+
+.product-section
+    width: 100%
+    background-color: white
+    padding: 4em 0 0 0 
+.product-section .model-wrap
+    background-color: white
+.product-section .model-wrap .heading
+    width: 100%
+    text-align: center
+    padding: 1em
+    h4 
+        font-size: $size3
+        font-weight: bold
+        color: brandColor(primary)
+        span 
+            color: brandColor(secondary)
+.product-section .model-wrap .product-item
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    padding: 3em 0
+.product-section .model-wrap .product-item .image-wrap
+    display: flex
+    justify-content: center
+    align-items: center
+    img 
+        margin: auto
+        width: 200px
+        height: 200px
+.product-section .model-wrap .product-item .info-wrap
+    .title
+        font-size: $size4
+        font-weight: bold
+
+    p 
+        font-size: $size6
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer-section
+    width: 100%
+    background-color: grayColor(g800)
+.footer-section .footer-top .container
+    width: 100%
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-gap: 1em
+    padding: 6em 0
+    @include desktop_md 
+        grid-template-columns: repeat(1, 1fr)
+        padding: 0  
+.footer-section .footer-top .wrap
+    width: 100%
+    padding: 0 0 0 4em
+    @include desktop_md 
+        padding: 1em
+.footer-section .footer-top .wrap .head
+    color: white
+    font-size: $size5
+    margin: 0 0 2em 0
+.footer-section .footer-top .wrap .text 
+    color: white
+    font-size: $size6  
+    margin: 0 0 .7em 0
+    &.email
+        color: brandColor(primary)
+    &.link 
+        cursor: pointer
+
+.footer-section .footer-top .wrap .input-wrap
+    background-color: brandColor(secondary)
+    width: 100%
+    max-width: 280px
+    padding: 0
+    display: flex
+    margin: 0 0 .7em 0
+    input 
+        width: 100%
+        margin: .5em
+        background-color: transparent
+        border: none
+        outline: none
+    .send 
+        width: 3em
+        background-color: brandColor(primary)
+        display: flex
+        align-items: center
+        justify-content: center
+        cursor: pointer
+        fa-icon 
+            margin: auto
+            color: black
+        &:hover
+            fa-icon 
+                color: white
+.footer-section .footer-top .wrap .social-wrap
+    width: 100%
+    display: flex
+    margin: 0 0 .7em 0
+    fa 
+        margin: auto 1em auto 0
+        font-size: $size6
+        color: white
+
+.footer-section .footer-bottom
+    width: 100%
+    background-color: black
+    padding: 2em 0
+    h4 
+        width: 100%
+        text-align: center
+        color: white 
+        font-size: $size4
+
+
