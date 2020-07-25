@@ -91,14 +91,10 @@
     font-weight: bold
     text-transform: uppercase
     color: brandColor(primary) 
-.navbar-section .navbar .navbar-brand img
-    width: 100px
 .navbar-section .navbar .navbar-toggler
     background-color: brandColor(secondary) 
     fa-icon
         color: brandColor(primary)
-.navbar-section .navbar .navbar-collapse
-    display: flex
 .navbar-section .navbar .navbar-collapse .nav-pills
     width: 100%
     justify-content: flex-end
@@ -136,3 +132,82 @@
     color: brandColor(primary)
     text-transform: uppercase
 
+
+
+
+
+
+
+.welcome-section
+    width: 100%
+    background-color: white
+.welcome-section .bg
+    width: 100%
+    z-index: 0
+    clip-path: polygon(0 0, 75% 0, 50% 100%, 0% 100%)
+    background-color: brandColor(secondary)
+    min-height: 700px
+    @include desktop_md
+        clip-path: polygon(100% 0, 100% 50%, 50% 100%, 0 100%, 0 0)
+.welcome-section .model-wrap
+    width: 100%
+    position: absolute
+    z-index: 1
+.welcome-section .model-wrap .container
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    @include desktop_md
+        font-size: $size3
+        grid-template-columns: repeat(1, 1fr)
+.welcome-section .model-wrap .info-wrap
+    display: flex
+    flex-direction: column
+    height: fit-content
+    justify-content: center
+    align-items: flex-start
+    min-height: 700px
+    h4 
+        font-size: $size2
+        color: white
+        font-weight: bold
+        @include desktop_lg
+            font-size: $size3
+        @include desktop_md
+            font-size: $size4
+        @include desktop_sm
+            font-size: $size5
+    p 
+        font-size: $size5
+        color: white
+        margin: 2em 0
+    .btn 
+        border-radius: 1em
+        text-align: center
+        background-image: linear-gradient(to right, darken( brandColor(primary), 10)  , lighten( brandColor(primary), 10) )
+        border: none
+        color: white
+        fa-icon 
+            margin-left: 2em
+        @include desktop_lg
+            margin: 0 .2em
+        &:hover
+            border: none
+            box-shadow: 0 0 30px rgba(0, 0, 0, .3)
+            background-image: linear-gradient(to right, lighten( brandColor(secondary), 10)  , lighten( brandColor(secondary), 10) )
+.welcome-section .model-wrap .image-wrap 
+    background: url("../../../assets/illustrations/api_process.svg") no-repeat
+    -webkit-background: url("../../../assets/illustrations/api_process.svg") no-repeat
+    -moz-background: url("../../../assets/illustrations/api_process.svg") no-repeat
+    -ms-background: url("../../../assets/illustrations/api_process.svg") no-repeat
+    -o-background: url("../../../assets/illustrations/api_process.svg") no-repeat
+    background-size: 100%
+    -webkit-background-size: 100%
+    -moz-background-size: 100%
+    -o-background-size: 100%
+    background-position: center
+    -webkit-background-position: center
+    -moz-background-position: center
+    -ms-background-position: center
+    -o-background-position: center      
+    @include desktop_md
+        display: none
