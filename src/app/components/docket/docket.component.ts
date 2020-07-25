@@ -15,6 +15,8 @@ export class DocketComponent implements OnInit {
     private notifyService: NotificationService
   ) {  }
 
+// icons
+public faPowerOff = faPowerOff;
 ngOnInit() {
 
 }

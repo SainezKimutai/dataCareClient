@@ -1,1 +1,80 @@
 @import 'src/styles.sass'
+
+.main 
+    position: absolute
+    top: 0
+    left: 0
+    width: 100vw
+    height: 100vh
+    background-color: white 
+    background-image: linear-gradient(to right, darken( brandColor(primary), 10)  , lighten( brandColor(primary), 10) )
+    -webkit-background-image: linear-gradient(to right, darken( brandColor(primary), 10)  , lighten( brandColor(primary), 10) )
+    -moz-background-image: linear-gradient(to right, darken( brandColor(primary), 10)  , lighten( brandColor(primary), 10) )
+.main .header-section
+    width: 100%
+    padding: .3em 3em
+    text-align: center
+    background-color: darken(brandColor(primary), 10)
+    display: flex
+    h4 
+        margin: auto auto auto 0
+        font-size: $size3
+        color: brandColor(secondary)
+    .btn 
+        border-radius: 1em
+        text-align: center
+        background-image: linear-gradient(to right, darken( brandColor(primary), 5)  ,lighten( brandColor(primary), 5) )
+        -webkit-background-image: linear-gradient(to right, darken( brandColor(primary), 5)  ,lighten( brandColor(primary), 5) )
+        -moz-background-image: linear-gradient(to right, darken( brandColor(primary), 5)  , lighten( brandColor(primary), 5) )
+        -o-background-image: linear-gradient(to right, darken( brandColor(primary), 5)  , lighten( brandColor(primary), 5) )
+        border: none
+        color: white
+        fa-icon 
+            margin-right: 2em
+        &:hover
+            border: none
+            box-shadow: 0 0 30px rgba(0, 0, 0, .3)
+            background-image: linear-gradient(to right, lighten( btsColor(danger), 10)  , lighten( btsColor(danger), 10) )
+.main .body-section
+    width: 100%
+    padding: 3em .5em .1em .5em
+.main .body-section .docket-wrapper
+    margin: auto 
+    border-radius: 5px
+    max-width: 600px
+    background-color: grayColor(g100) 
+    box-shadow: 0 0 30px rgba(0, 0, 0, .2)
+.main .body-section .docket-wrapper .heading 
+    padding: 1em
+    background-color: darken(brandColor(primary), 10)
+    text-align: center
+    h4 
+        font-size: $size3
+        color: white
+        font-weight: bold
+    p 
+        font-size: $size6
+        color: white
+.main .body-section .docket-wrapper .list-wrap
+    background-color: white 
+    padding: 1em
+.main .body-section .docket-wrapper .list-wrap .list-item
+    width: 100%
+    border-radius: 2px
+    margin: 0 0 .5em 0
+    padding: .5em
+    background-color: whitesmoke
+    box-shadow: 0 0 30px rgba(0, 0, 0, .2)
+    font-size: $size4
+    font-weight: bold 
+    text-align: center
+    cursor: pointer
+
+    &:hover
+        background-image: linear-gradient(to right, darken( brandColor(primary), 10)  , lighten( brandColor(primary), 10) )
+        color: white
+        
+
+
+
+

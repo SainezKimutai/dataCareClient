@@ -85,13 +85,14 @@ togglePassword(text: string) {
 
 
 logUserIn() {
-  if (this.LoginForm.valid) {
-    this.ImprintLoader = true;
-    this.login(this.LoginForm.value.email, this.LoginForm.value.password);
-  }
-  if (this.LoginForm.invalid) {
-    this.notifyService.showWarning('Please input correct email and password', 'Invalid inputs');
-  }
+  this.router.navigate(['/docket']);
+  // if (this.LoginForm.valid) {
+  //   this.ImprintLoader = true;
+  //   this.login(this.LoginForm.value.email, this.LoginForm.value.password);
+  // }
+  // if (this.LoginForm.invalid) {
+  //   this.notifyService.showWarning('Please input correct email and password', 'Invalid inputs');
+  // }
 }
 
 
