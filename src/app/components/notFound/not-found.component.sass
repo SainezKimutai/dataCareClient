@@ -1,0 +1,48 @@
+@import "src/styles.sass"
+
+section
+    position: absolute
+    width: 100%
+    height: 100%
+    display: flex
+    background-color: transparent
+section .custom-card 
+    margin: auto
+    width: fit-content
+    background-color: white
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-gap: 0
+    box-shadow: 0 0 30px rgba(0, 0, 0, .1)
+    -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, .1)
+    -moz-box-shadow: 0 0 30px rgba(0, 0, 0, .1)
+    -ms-box-shadow: 0 0 30px rgba(0, 0, 0, .1)
+    border-radius: 1em
+    @include desktop_md
+        grid-template-columns: repeat(1, 1fr)
+section .custom-card .illu-wrap
+    display: flex 
+section .custom-card .illu-wrap img 
+    width: 400px
+    height: 400px 
+    margin: auto
+section .custom-card .info-wrap
+    padding: 2em
+    display: flex
+    flex-direction: column
+    align-content: flex-start
+    justify-content: center
+    h4
+        font-size: 28px
+        @include desktop_md
+            text-align: center
+        span
+            font-size: 28px
+    h5
+        font-size: 14px
+        font-family: Montserrat
+        @include desktop_md
+            text-align: center
+    .btn
+        margin: 1em 
+    
