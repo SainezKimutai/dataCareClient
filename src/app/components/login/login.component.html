@@ -1,1 +1,102 @@
-<h4>Login</h4>
+<main class="main">
+
+<section class="header-section">
+    <h4>Data&nbsp;Care</h4>
+</section>
+
+
+<section class="body-section">
+
+    <div class="form-wrapper">
+        <div class="heading">
+            <h4>Welcome&nbsp;Back!</h4>
+            <p>Enjoy using the system</p>
+        </div>
+
+        <div [hidden]="verifyForm" class="form-wrapper">
+            <form class="form" [formGroup]="LoginForm">
+                <div class="form-group">
+                    <div class="input-wrap">
+                        <span><fa-icon [icon]="faEnvelope"></fa-icon></span>
+                        <input type="text" name="email" #email
+                        formControlName="email"  [class.is-invalid]="formLogin.email.invalid && formLogin.email.touched" 
+                        placeholder="you@gmail.com">
+                    </div>
+                    <div #emailError class="error"
+                    *ngIf="formLogin.email.invalid && formLogin.email.touched"
+                    ><span>Type email here !!</span></div>
+                </div>
+                <div class="form-group">
+                    <div class="input-wrap">
+                         <span><fa-icon [icon]="faKey"></fa-icon></span>
+                        <input [type]="passwordType" placeholder="*************" 
+                        name="password"
+                        formControlName="password"  [class.is-invalid]="formLogin.password.invalid && formLogin.password.touched">
+                        <span *ngIf="passwordType === 'password'" class="toggler" (click)="togglePassword('text')"><fa-icon [icon]="faEye"></fa-icon></span>
+                        <span *ngIf="passwordType === 'text'" class="toggler" (click)="togglePassword('password')"><fa-icon [icon]="faEyeSlash"></fa-icon></span>
+                    </div>
+                    <div class="error"
+                    *ngIf="formLogin.password.invalid && formLogin.password.touched"
+                    ><span>Type password here !!</span></div>
+                </div>
+                <div class="btn-wrap">
+                    <button class="btn" (click)="logUserIn()">Login</button>
+                </div>
+            </form>
+            <div class="option-wrap">
+                <div>Forgot password ? <span (click)="resetPassword()">Reset</span></div>
+            </div>
+        </div>
+
+
+
+        <div [hidden]="!verifyForm" class="form-wrapper">
+            <div class="title">
+                <h4>Password Reset</h4>
+            </div>
+            <form class="form" [formGroup]="ResetForm">
+                <p >A confirmation code has been sent to your email, use the code to finish your password reset process.
+                    <span class="resend-code" (click)="resetPassword()">Resend Code</span>
+                  </p>
+                <div class="form-group confirmation-input">
+                    <div class="input-wrap">
+                        <input type="text" 
+                        formControlName="code"  [class.is-invalid]="formReset.code.invalid && formReset.code.touched" 
+                        placeholder="CODE">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-wrap">
+                        <span><fa-icon [icon]="faKey"></fa-icon></span>
+                        <input type="password" 
+                        (keyup)="checkPasswordMatch()"
+                        formControlName="password"  [class.is-invalid]="formReset.password.invalid && formReset.password.touched" 
+                        placeholder="Password">
+                    </div>
+                    <div class="error"
+                    *ngIf="formReset.password.invalid && formReset.password.touched"
+                    ><span>Password must be at least 4 digits</span></div>
+                </div>
+                <div class="form-group">
+                    <div class="input-wrap">
+                        <span><fa-icon [icon]="faKey"></fa-icon></span>
+                        <input type="password" 
+                        (keyup)="checkPasswordMatch()"
+                        formControlName="password2"  [class.is-invalid]="formReset.password2.invalid && formReset.password2.touched" 
+                        placeholder="Confirm Password">
+                    </div>
+                </div>
+                <div class="btn-wrap">
+                    <button class="btn" (click)="verifyCode()">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</section>
+
+
+
+
+
+</main>

@@ -1,0 +1,115 @@
+@import 'src/styles.sass'
+
+.main 
+    position: absolute
+    top: 0
+    left: 0
+    width: 100vw
+    height: 100vh
+    background-color: white 
+    background-image: linear-gradient(to right, darken( brandColor(primary), 10)  , lighten( brandColor(primary), 10) )
+.main .header-section
+    width: 100%
+    padding: .3em 1em
+    text-align: center
+    background-color: darken(brandColor(primary), 10)
+    // box-shadow: 7px 0 30px rgba(0, 0, 0, .2)
+    h4 
+        font-size: $size3
+        color: brandColor(secondary)
+
+.main .body-section
+    width: 100%
+    padding: 3em .5em .1em .5em
+.main .body-section .form-wrapper
+    margin: auto 
+    border-radius: 5px
+    max-width: 600px
+    background-color: grayColor(g100) 
+    box-shadow: 0 0 30px rgba(0, 0, 0, .2)
+
+.main .body-section .form-wrapper .heading 
+    padding: 1em
+    background-color: darken(brandColor(primary), 10)
+    text-align: center
+    h4 
+        font-size: $size3
+        color: white
+        font-weight: bold
+    p 
+        font-size: $size6
+        color: white
+.main .body-section .form-wrapper .form 
+    padding: 1em
+
+.main .body-section .form-wrapper .form .form-group
+    width: 100%
+    margin: 0 0 2em 0
+    label
+        font-size: $size6
+        font-weight: bold
+    .input-wrap
+        width: 100%
+        display: flex
+        align-items: center
+        background-color: transparent
+
+        span 
+            min-width: 2.5em
+            max-width: 2.5em
+            display: flex
+            align-items: center
+            justify-content: center
+            height: 100%
+            &.toggler
+                color: brandColor(secondary)
+                cursor: pointer
+        input, select 
+            width: 100%
+            border: none
+            outline: none
+            background-color: transparent
+            border-bottom: solid 1px brandColor(primary)
+            font-size: 14px
+            color: black
+            padding: .5em
+            border-radius: 2px
+            font-weight: 400
+            &.is-invalid
+                border: solid 1px btsColor(danger)
+        textarea
+            width: 100%
+            height: 20em
+            border: none
+            outline: none
+            background-color: grayColor(g200)
+            font-size: 14px
+            color: black
+            padding: .5em
+            border-radius: 2px
+            font-weight: 400       
+.main .body-section .form-wrapper .form .form-group .error 
+    padding: 0 4em 
+    font-size: 12px
+    color: btsColor(danger)
+.main .body-section .form-wrapper .form .form-group.confirmation-input
+    width: 100%
+    text-align: center
+    input
+        letter-spacing: 1em
+        text-align: center
+.main .body-section .form-wrapper .form .btn-wrap
+    width: 100%
+    .btn
+        background-color: brandColor(primary)
+        width: 100%
+        color: white
+
+.main .body-section .form-wrapper .option-wrap
+    div 
+        padding: 1em 0
+        font-size: $size6
+        span 
+            color: brandColor(secondary)
+            text-decoration: underline
+            cursor: pointer
