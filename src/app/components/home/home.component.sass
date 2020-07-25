@@ -103,14 +103,6 @@
     cursor: pointer
     border-bottom: solid 2px transparent
     margin: 0 .2em
-    &:hover
-        border-bottom: solid 2px grayColor(g200)
-    &.dropup
-        border-bottom: solid 2px brandColor(secondary)
-    &.active
-        border-bottom: solid 2px brandColor(secondary)
-        .nav-link
-            font-weight: bold
 .navbar-section .navbar .navbar-collapse .nav-pills .nav-item.login
     border-radius: 1em
     width: 7em
@@ -132,7 +124,15 @@
     cursor: pointer
     color: brandColor(primary)
     text-transform: uppercase
-
+    background-color: transparent !important
+    border-radius: 0px !important
+    &:hover
+        border-bottom: solid 2px grayColor(g200)
+    &.dropup
+        border-bottom: solid 2px brandColor(secondary)
+    &.active
+        border-bottom: solid 2px brandColor(secondary)
+        font-weight: bold
 
 
 

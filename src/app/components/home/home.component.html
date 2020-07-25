@@ -12,7 +12,7 @@
 
 
 
-<main class="main">
+<main class="main" >
 
 <section class="top-section">
   <div class="container">
@@ -32,7 +32,6 @@
       <fa name="twitter"></fa>
       <fa name="instagram"></fa>
       <fa name="linkedin"></fa>
-  
     </div>
   </div>
   </div>
@@ -43,24 +42,24 @@
 
 <section #navBarSection class="navbar-section">
 
-  <nav class="navbar navbar-expand-lg container">
+  <nav id="home_navbar" class="navbar navbar-expand-lg container">
     <a class="navbar-brand" href="#">Data Care</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <fa-icon [icon]="faBars"></fa-icon>
     </button>
     <div class="navbar-collapse collapse" id="navbarNavDropdown">
       <ul class="navbar-nav nav-pills">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Products <span class="sr-only">(current)</span></a>
+        <li class="nav-item" (click)="scrollToElement(productSection)">
+          <a class="nav-link" href="#product_section" onClick="return false;">Products </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+        <li class="nav-item" (click)="scrollToElement(aboutSection)">
+          <a class="nav-link" href="#about_section" onClick="return false;">About</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
+        <li class="nav-item" (click)="scrollToElement(contactSection)">
+          <a class="nav-link" href="#contact_section" onClick="return false;">Contact</a>
         </li>
         <li class="nav-item login">
-          <a class="nav-link" href="#">Login</a>
+          <a class="nav-link">Login</a>
         </li>
       </ul>
     </div>
@@ -98,7 +97,7 @@
 
 
 
-<section class="product-section">
+<section id="product_section" #productSection class="product-section">
 
   <div class="model-wrap container">
 
@@ -147,7 +146,7 @@
 
 
 
-<section class="about-section">
+<section id="about_section" #aboutSection class="about-section">
 
   <div class="model-wrap">
     <div class="container">
@@ -176,7 +175,7 @@
 
 
 
-<section class="contact-section">
+<section id="contact_section" #contactSection class="contact-section">
 
   <div class="model-wrap container">
 

@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, ExtraOptions } from '@angular/router';
 import { AppCustomPreloader } from './app-preload.module';
-import { HomeComponent } from './components/home/home.component';
-import { LoginComponent } from './components/login/login.component';
 // tslint:disable: max-line-length
 // tslint:disable: quotemark
 
@@ -13,9 +11,13 @@ const routes: Routes = [
   { path: '**', loadChildren: 'src/app/components/notFound/not-found.module#NotFoundModule', data: {preload: false}}
 ];
 
+const routerOptions: ExtraOptions = {
+  preloadingStrategy: AppCustomPreloader
+};
+
 @NgModule({
   imports: [
-            RouterModule.forRoot(routes, { preloadingStrategy: AppCustomPreloader }),
+            RouterModule.forRoot(routes, routerOptions),
             ],
   exports: [RouterModule]
 })
