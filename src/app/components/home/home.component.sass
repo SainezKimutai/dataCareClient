@@ -238,6 +238,11 @@
     display: grid
     grid-template-columns: repeat(2, 1fr)
     padding: 3em 0
+    @include desktop_md
+        display: flex
+        flex-direction: column
+        &.reverse
+            flex-direction: column-reverse
 .product-section .model-wrap .product-item .image-wrap
     display: flex
     justify-content: center
@@ -265,10 +270,22 @@
 
 .about-section
     width: 100%
-    background-color: whitesmoke
-    padding: 4em 0 0 0 
+    background-color: brandColor(primary)
+.about-section .bg
+    width: 100%
+    z-index: 0
+    clip-path: ellipse(43% 99% at 25% 53%)
+    background-color: brandColor(secondary)
+    min-height: 700px
+    @include desktop_md
+        clip-path: ellipse(43% 99% at 25% 53%)
 .about-section .model-wrap
-    background-color: transparent
+    width: 100%
+    position: absolute
+    z-index: 1
+    min-height: 700px
+    padding: 4em 0 0 0 
+    border: solid 1px white
 .about-section .model-wrap .heading
     width: 100%
     text-align: center
@@ -278,7 +295,7 @@
         font-weight: bold
         color: brandColor(primary)
         span 
-            color: brandColor(secondary)
+            color: white
 .about-section .model-wrap .info-wrap
     display: flex
     flex-direction: column
