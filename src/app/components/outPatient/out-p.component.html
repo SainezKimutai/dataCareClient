@@ -97,34 +97,34 @@
 
 
     <li [ngClass]="ReceptionStatus ? 'nav-item active' : 'nav-item'" >
-        <a  [ngClass]="ReceptionStatus ? 'nav-link active' : 'nav-link'">
+        <a  [ngClass]="ReceptionStatus ? 'nav-link active' : 'nav-link'" routerLink="/out-patient/reception">
           <fa-icon [icon]="faCube"></fa-icon> <span>Reception</span>
         </a>
     </li>
 
 
     <li [ngClass]="ExaminationStatus ? 'nav-item active' : 'nav-item'" >
-      <a  [ngClass]="ExaminationStatus ? 'nav-link active' : 'nav-link'">
+      <a  [ngClass]="ExaminationStatus ? 'nav-link active' : 'nav-link'" routerLink="/out-patient/examination">
         <fa-icon [icon]="faCube"></fa-icon> <span>Examination</span>
       </a>
     </li>
 
 
     <li [ngClass]="LaboratoryStatus ? 'nav-item active' : 'nav-item'" >
-      <a  [ngClass]="LaboratoryStatus ? 'nav-link active' : 'nav-link'">
+      <a  [ngClass]="LaboratoryStatus ? 'nav-link active' : 'nav-link'" routerLink="/out-patient/lab">
         <fa-icon [icon]="faCube"></fa-icon> <span>Laboratory</span>
       </a>
   </li>
 
 
   <li [ngClass]="XrayStatus ? 'nav-item active' : 'nav-item'" >
-    <a  [ngClass]="XrayStatus ? 'nav-link active' : 'nav-link'">
+    <a  [ngClass]="XrayStatus ? 'nav-link active' : 'nav-link'" routerLink="/out-patient/x-ray">
       <fa-icon [icon]="faCube"></fa-icon> <span>X-Ray</span>
     </a>
   </li>
 
   <li [ngClass]="PharmacyStatus ? 'nav-item active' : 'nav-item'" >
-    <a  [ngClass]="PharmacyStatus ? 'nav-link active' : 'nav-link'">
+    <a  [ngClass]="PharmacyStatus ? 'nav-link active' : 'nav-link'" routerLink="/out-patient/pharmacy">
       <fa-icon [icon]="faCube"></fa-icon> <span>Pharmacy</span>
     </a>
   </li>

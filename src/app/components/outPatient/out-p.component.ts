@@ -15,6 +15,8 @@ export class OutPatientComponent implements OnInit {
     private notifyService: NotificationService
   ) {  }
 
+public sideBarStatus = true;
+
 // icons
 public faCube = faCube;
 public faHome = faHome;
@@ -54,8 +56,8 @@ checkActiveNav() {
   this.XrayStatus = false;
   this.PharmacyStatus = false;
   if (sessionStorage.getItem('ActiveNav') === 'op-reception') {this.ReceptionStatus = true;
-  } else if (sessionStorage.getItem('ActiveNav') === 'op-examination') {this.ExaminationStatus = true;
-  } else if (sessionStorage.getItem('ActiveNav') === 'op-laboratory') {this.LaboratoryStatus = true;
+  } else if (sessionStorage.getItem('ActiveNav') === 'op-exam') {this.ExaminationStatus = true;
+  } else if (sessionStorage.getItem('ActiveNav') === 'op-lab') {this.LaboratoryStatus = true;
   } else if (sessionStorage.getItem('ActiveNav') === 'op-xray') {this.XrayStatus = true;
   } else if (sessionStorage.getItem('ActiveNav') === 'op-pharmacy') {this.PharmacyStatus = true;
   }
