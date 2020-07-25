@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy, ViewChild, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
-import { faEnvelope, faKey, faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faKey, faEye, faEyeSlash, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { NotificationService } from 'src/app/shared/services/notification.service';
 import { updateHeader } from 'src/app/shared/dev/dev';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
@@ -28,6 +28,7 @@ public faEnvelope = faEnvelope;
 public faKey = faKey;
 public faEye = faEye;
 public faEyeSlash = faEyeSlash;
+public faArrowLeft = faArrowLeft;
 
 
 public passwordType = 'password';

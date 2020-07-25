@@ -8,6 +8,10 @@ import { ReactiveFormsModule} from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { AppCustomPreloader } from './app-preload.module';
 import { ToastrModule } from 'ngx-toastr';
+import { NotificationService } from './shared/services/notification.service';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -17,15 +21,18 @@ import { ToastrModule } from 'ngx-toastr';
     BrowserModule,
     AppRoutingModule,
     AngularFontAwesomeModule,
+    FontAwesomeModule,
     ReactiveFormsModule,
     FormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
     ToastrModule.forRoot({
       timeOut: 5000,
       positionClass: 'toast-bottom-right',
       preventDuplicates: false,
     }),
   ],
-  providers: [AppCustomPreloader],
+  providers: [AppCustomPreloader, NotificationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

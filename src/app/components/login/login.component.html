@@ -40,11 +40,12 @@
                     ><span>Type password here !!</span></div>
                 </div>
                 <div class="btn-wrap">
-                    <button class="btn" (click)="logUserIn()">Login</button>
+                    <button class="btn" (click)="logUserIn()">Log In</button>
                 </div>
             </form>
             <div class="option-wrap">
                 <div>Forgot password ? <span (click)="resetPassword()">Reset</span></div>
+                <button class="btn" routerLink="/home"> <fa-icon [icon]="faArrowLeft"></fa-icon> Home</button>
             </div>
         </div>
 

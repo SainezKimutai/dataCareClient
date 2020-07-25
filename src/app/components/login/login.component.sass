@@ -106,10 +106,26 @@
         color: white
 
 .main .body-section .form-wrapper .option-wrap
+    padding: 1em
     div 
-        padding: 1em 0
         font-size: $size6
+        padding: 0 0 1em 0
         span 
             color: brandColor(secondary)
             text-decoration: underline
             cursor: pointer
+    .btn 
+        border-radius: 1em
+        text-align: center
+        background-image: linear-gradient(to right, darken( brandColor(primary), 10)  , lighten( brandColor(primary), 10) )
+        -webkit-background-image: linear-gradient(to right, darken( brandColor(primary), 10)  , lighten( brandColor(primary), 10) )
+        -moz-background-image: linear-gradient(to right, darken( brandColor(primary), 10)  , lighten( brandColor(primary), 10) )
+        -o-background-image: linear-gradient(to right, darken( brandColor(primary), 10)  , lighten( brandColor(primary), 10) )
+        border: none
+        color: white
+        fa-icon 
+            margin-right: 2em
+        &:hover
+            border: none
+            box-shadow: 0 0 30px rgba(0, 0, 0, .3)
+            background-image: linear-gradient(to right, lighten( brandColor(secondary), 10)  , lighten( brandColor(secondary), 10) )
