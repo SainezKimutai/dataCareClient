@@ -217,7 +217,7 @@ redirectAfterLogin(dataUser) {
     sessionStorage.setItem('permissionStatus', 'isNormal');
 
     updateHeader().then(() => {
-      this.router.navigate(['/main/']);
+      this.router.navigate(['/docket/']);
       });
 
     } else if (dataUser.userRole === 'manager') {
@@ -228,7 +228,7 @@ redirectAfterLogin(dataUser) {
       sessionStorage.setItem('permissionStatus', 'isManager');
 
       updateHeader().then(() => {
-        this.router.navigate(['/main/']);
+        this.router.navigate(['/docket/']);
       });
 
     } else if (dataUser.userRole === 'admin') {
@@ -239,7 +239,7 @@ redirectAfterLogin(dataUser) {
       sessionStorage.setItem('permissionStatus', 'isAdmin');
 
       updateHeader().then(() => {
-        this.router.navigate(['/admin/']);
+        this.router.navigate(['/docket/']);
       });
     }
 
